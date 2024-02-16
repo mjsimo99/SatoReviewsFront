@@ -1,0 +1,43 @@
+<div class="pt-32 md:py-12 xl:container m-auto px-6 md:px-12">
+    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+        <div class="hidden lg:block lg:w-1/2 bg-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')">
+        </div>
+        <div class="w-full p-8 lg:w-1/2">
+            <h2 class="text-2xl font-semibold text-gray-700 text-center">Register</h2>
+            <p class="text-xl text-gray-600 text-center">Create a new account</p>
+            <div class="mt-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                <input
+                    class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                    type="email" [(ngModel)]="registration.email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mt-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                <input
+                    class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                    type="password" [(ngModel)]="registration.password" name="password"
+                    placeholder="Enter your password" required>
+            </div>
+            <div class="mt-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="role">Role</label>
+                <select id="role" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                        [(ngModel)]="registration.role" name="role" required>
+                    <option disabled selected value="">Select Role</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="moderator">Moderator</option>
+                </select>
+            </div>
+            <div class="mt-8">
+                <button (click)="register()"
+                    class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Register</button>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+                <span class="border-b w-1/5 md:w-1/4"></span>
+                <a href="#" class="text-xs text-gray-500 uppercase">or login</a>
+                <span class="border-b w-1/5 md:w-1/4"></span>
+            </div>
+        </div>
+    </div>
+</div>
